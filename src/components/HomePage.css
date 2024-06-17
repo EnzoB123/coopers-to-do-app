@@ -1,6 +1,65 @@
-/* src/components/HomePage.css */
 .home-page {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-container {
+  background-image: url('../assets/images/BG.png');
+  background-size: 100vw;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.header {
+  padding: 16px;
+}
+
+
+.toDoTittle {
+  height: 100vh;
+  border: 1px solid black;
+}
+
+/* @media (min-width: 768px) {
+  .hero {
+    height: 80vh;
   }
-  
+
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 4vw;
+  }
+
+  .hero-text p {
+    font-size: 2vw;
+  }
+} */
+
+
+/* @media (min-width: 1024px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-text h1 {
+    font-size: 3vw;
+  }
+
+  .hero-text p {
+    font-size: 1.5vw;
+  }
+
+  .hero-button {
+    font-size: 1.5vw;
+    padding: 15px 30px;
+  }
+} */

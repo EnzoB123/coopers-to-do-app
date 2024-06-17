@@ -1,0 +1,42 @@
+
+.todo-title-section {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.todo-title-section::before {
+  content: '';
+  position: absolute;
+  top: -50px; 
+  left: -50%;
+  right: -50%;
+  bottom: -50px;
+  background-color: #000;
+  z-index: -1;
+  transform: rotate(-8deg);
+}
+
+.todo-title {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.todo-title::after {
+  content: '';
+  display: block;
+  width: 240px; 
+  height: 4px; 
+  background-color: #00cc66; 
+  margin: 10px auto 0;
+}
+
+.todo-subtitle {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0 0;
+}

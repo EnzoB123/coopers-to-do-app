@@ -1,46 +1,6 @@
-/* src/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  font-family: 'Arial, sans-serif';
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Montserrat', Arial;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-header, .hero {
-  padding: 16px;
-}
-
-header img {
-  height: 40px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: row;
-  }
-}

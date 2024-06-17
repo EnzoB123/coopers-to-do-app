@@ -9,7 +9,6 @@ const Contact = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/contact', { email, message });
-      // Show success message or clear the form
     } catch (err) {
       console.error(err);
     }
