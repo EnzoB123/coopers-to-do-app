@@ -1,0 +1,56 @@
+/* src/components/GoodThings.css */
+
+.good-things-section {
+    padding: 60px 20px;
+    background-color: #00cc66;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .good-things-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .good-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .good-card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .good-card-content {
+    padding: 20px;
+  }
+  
+  .good-card-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  .good-card-link {
+    font-size: 14px;
+    color: #00cc66;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .good-card-link:hover {
+    text-decoration: underline;
+  }
+  

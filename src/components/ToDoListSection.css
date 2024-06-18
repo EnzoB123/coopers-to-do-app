@@ -12,30 +12,33 @@
 
 .todo-card {
   background-color: #fff;
-  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
   padding: 20px;
 }
 
 .todo-card.todo {
-  border-top: 8px solid #ffa500; 
+  border-top: 20px solid #E88D39;
+  ; 
 }
 
 .todo-card.done {
-  border-top: 8px solid #00cc66;
+  border-top: 20px solid #4AC959;
+  ;
 }
 
 .todo-card-title {
   font-size: 24px;
   margin: 0;
   color: #333;
+  left: 220px;
+  right: 200px;
 }
 
 .todo-card-subtitle {
   font-size: 14px;
   margin: 10px 0;
-  color: #666;
+  color: #000000;
 }
 
 .todo-items {
@@ -44,12 +47,15 @@
   margin: 20px 0;
 }
 
+
+
 .todo-items li {
   display: flex;
   align-items: center;
   font-size: 14px;
   margin: 10px 0;
-  color: #333;
+  color: #000000;
+  font-weight: 400;
   justify-content: space-between;
 }
 
@@ -72,7 +78,9 @@
   margin-left: auto;
   font-size: 12px;
   cursor: pointer;
-  color: red;
+  color: #999999;
+  font-weight: 700;
+
 }
 
 .add-task {
