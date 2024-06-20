@@ -1,22 +1,41 @@
-import React from 'react';
-import Header from './Header.jsx';
-import Hero from './Hero.jsx';
-import ToDoTitle from './ToDoTitle.jsx';
-import ToDoListSection  from './ToDoListSection.jsx';
-import GoodThings from './GoodThings.jsx';
-import Form from './Form.jsx';
-import Footer from './Footer.jsx'
+import React, { useState, useEffect } from 'react';
+import Header from './Header';
+import Hero from './Hero';
+import ToDoTitle from './ToDoTitle';
+import ToDoListSection from './ToDoListSection';
+import GoodThings from './GoodThings';
+import Form from './Form';
+import Footer from './Footer';
 import './HomePage.css';
+import axios from 'axios';
 
 const HomePage = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      if (user) {
+        try {
+          const res = await axios.get('http://localhost:5000/api/todos', {
+            headers: { 'auth-token': localStorage.getItem('token') }
+          });
+          setUser({ ...user, todos: res.data });
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
+    fetchTodos();
+  }, [user]);
+
   return (
     <div className="home-page">
       <div className="background-container">
-        <Header />
+        <Header setUser={setUser} />
         <Hero />
-        <ToDoTitle />
       </div>
-      <ToDoListSection /> 
+      <ToDoTitle />
+      <ToDoListSection user={user} setUser={setUser} />
       <GoodThings />
       <Form />
       <Footer />
