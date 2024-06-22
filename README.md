@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Relatório de Desenvolvimento do Projeto Full Stack
+## Introdução
+Este relatório descreve o desenvolvimento de uma aplicação full stack para a avaliação técnica, seguindo um layout específico e incluindo funcionalidades de cadastro, login, uma to-do list e envio de e-mails.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Estrutura do Projeto
+O projeto foi dividido em duas partes principais: front-end e back-end.
 
-## Available Scripts
+# Front-end
+Tecnologias Utilizadas:
 
-In the project directory, you can run:
+React.js: Construção da interface.
+CSS3: Estilização, com foco em design responsivo (Mobile First).
+React Router: Navegação entre páginas.
+Axios: Comunicação com a API.
+Componentes Principais:
 
-### `npm start`
+Header: Inclui o botão "Entrar".
+Hero Section: Imagem de fundo e texto de boas-vindas.
+To-Do List: CRUD de tarefas.
+Contact Form: Envio de e-mails.
+## Desafios:
+Responsividade: Garantir a adaptação para diferentes tamanhos de tela usando media queries.
+Fidelidade ao Design: Ajustes finos para corresponder ao layout do Figma.
+# Back-end
+## Tecnologias Utilizadas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Node.js: Servidor.
+Express.js: Criação de rotas.
+JWT: Autenticação.
+bcrypt.js: Criptografia de senhas.
+Nodemailer: Envio de e-mails.
+Google APIs: OAuth2 para envio seguro de e-mails.
+Funcionalidades:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Autenticação: Login e registro de usuários com JWT.
+CRUD de To-Do List: Cada usuário pode gerenciar suas próprias tarefas.
+Envio de E-mails: Implementação do Nodemailer com OAuth2.
+Desafios:
 
-### `npm test`
+Configuração OAuth2: Gerenciamento de tokens de acesso e atualização para envio de e-mails.
+Autenticação: Garantir acesso seguro às rotas da API.
+Deploy
+A aplicação foi implantada no Heroku.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Scripts de Deploy no package.json:
 
-### `npm run build`
+json
+Copy code
+{
+  "scripts": {
+    "start": "node coopers-to-do-server/server.js",
+    "heroku-postbuild": "cd coopers-to-do && npm install && npm run build"
+  }
+}
+## Desafios:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estrutura do Projeto: Ajustes na estrutura para deploy correto no Heroku.
+Dependências: Resolver problemas de dependências ausentes.
+Conclusão
+O projeto atendeu aos requisitos de layout, funcionalidades e envio de e-mails. A principal dificuldade foi a configuração de autenticação e envio de e-mails usando OAuth2, que foi resolvida com pesquisa e implementação cuidadosa.
